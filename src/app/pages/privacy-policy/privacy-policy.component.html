@@ -1,0 +1,38 @@
+<img
+    ngSrc="assets/images/banner_3.jpg"
+    alt="Banner Privacy Policy"
+    title="Banner Privacy Policy"
+    width="1920"
+    height="648"
+    priority
+    class="w-full"
+/>
+
+
+<div class="page-default py-[40px] max-sm:py-[24px]">
+    <div class="container mx-auto px-[15px]">
+        @if(screenWidth <= 640) {
+        <div
+            class="des"
+            [innerHtml]="
+                (showMore) ? dataPrivacyPolicy?.Content :  dataPrivacyPolicy?.Content | slice:0:3000
+
+            "
+        ></div>
+        <span *ngIf="!showMore">...</span>
+        <a
+            href="javascript:;"
+            class="text-[#0096ed] text-[12px] leading-[18px]"
+            *ngIf="!showMore"
+            (click)="showMore = true"
+            >see more</a
+        >
+        } @else {
+        <div
+            class="des"
+            [innerHtml]="dataPrivacyPolicy && dataPrivacyPolicy.Content"
+        ></div>
+
+        }
+    </div>
+</div>

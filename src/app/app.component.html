@@ -1,0 +1,22 @@
+<header>
+    <app-header></app-header>
+</header>
+<main>
+    <router-outlet></router-outlet>
+    <div
+        [ngClass]="{ 'show-scroll': showScroll }"
+        (click)="scrollToTop()"
+        class="scroll-to-top"
+    >
+        <img
+            src="assets/images/arrow-down-double.svg"
+            alt="arrow-down-double"
+            width="39"
+            height="40"
+            class="max-sm:w-[19px] max-sm:h-[19px]"
+        />
+    </div>
+</main>
+<footer>
+    <app-footer></app-footer>
+</footer>

@@ -1,0 +1,332 @@
+<div
+    class="flex justify-center wow fadeIn"
+    data-wow-duration="0.5s"
+    data-wow-delay="0.5s"
+>
+    <img
+        ngSrc="assets/images/banner.png"
+        width="1920"
+        height="914"
+        alt="Banner govo Vietnam"
+        title="Banner govo Vietnam"
+        priority
+    />
+</div>
+<div
+    class="relative before:bg-[url('assets/images/bg_product1.png')] before:bg-no-repeat before:w-[389px] before:h-[2007px] before:absolute before:bottom-[-20%] before:right-0 before:z-[-1] before:bg-bottom-left max-lg:before:bottom-0 max-lg:before:top-[12%] max-lg:before:bg-[url('assets/images/bg_mobie_2.png')] max-lg:before:w-[86px] max-lg:before:h-[405px]"
+>
+    <div
+        id="outstanding"
+        class="pt-[120px] mb-[80px] max-sm:pt-[40px] max-sm:mb-[4px] max-lg:pt-[80px] max-lg:mb-[30px]"
+    >
+        <div class="container mx-auto px-[15px]">
+            <app-title-home title="Outstanding" />
+            <div
+                class="wow bounceInLeft mt-[96px] max-sm:mt-[18px] max-lg:mt-[48px]"
+                data-wow-duration="0.75s"
+                data-wow-delay="0.5s"
+            >
+                <div class="flex items-center justify-around">
+                    @for (item of outstanding; track $index) {
+                    <div class="text-center px-[86px] max-lg:px-[20px]">
+                        <img
+                            [ngSrc]="item.image"
+                            alt="Banner govo Vietnam"
+                            title="Banner govo Vietnam"
+                            width="160"
+                            height="165"
+                            class="max-sm:w-[45px] max-sm:h-[45px] max-lg:w-[90px] max-lg:h-[90px]"
+                        />
+                        <p
+                            class="text-black font-semibold text-[64px] leading-[96px] inline-flex max-sm:text-[18px] max-sm:leading-[27px] max-lg:text-[32px] max-lg:leading-[48px]"
+                        >
+                            <span [countUp]="item.total" [duration]="duration">
+                                {{ item.total }}</span
+                            ><span> {{ item.unit }}</span>
+                        </p>
+                        <p
+                            class="text-[#808080] font-medium text-[32px] leading-[48px] max-sm:text-[12px] max-sm:leading-[18px] max-lg:text-[20px] max-lg:leading-[28px]"
+                        >
+                            {{ item.title }}
+                        </p>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        id="featured-products"
+        class="pt-[120px] mb-[80px] max-sm:pt-[40px] max-sm:mb-[4px] max-lg:pt-[80px] max-lg:mb-[30px]"
+    >
+        <div
+            class="relative before:bg-[url('assets/images/bg_product.png')] before:bg-no-repeat before:w-[66px] before:h-[170px] before:absolute before:top-0 before:left-[80px] before:z-[-1] before:bg-left-top max-lg:before:bg-[url('assets/images/bg_mobie_1.png')] max-lg:before:w-[19px] max-lg:before:h-[49px] max-lg:before:left-[14px]"
+        >
+            <div class="container mx-auto px-[15px]">
+                <app-title-home title="Featured Products" />
+                <div
+                    class="grid grid-cols-3 gap-x-[60px] gap-y-[80px] mx-[20px] mt-[96px] max-lg:grid-cols-2 max-sm:gap-x-[16px] max-sm:gap-y-[16px] max-sm:mt-[23px] max-sm:mx-0 max-lg:gap-x-[30px] max-lg:gap-y-[40px] max-lg:mt-[48px]"
+                >
+                    @for (item of products; track $index) {
+
+                    <div
+                        class="product-item wow bounceInUp relative shadow-2xl rounded-[30px] group/item max-sm:rounded-[12px]"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.5s"
+                    >
+                        <div class="z-20 block">
+                            <img
+                                [ngSrc]="item.image"
+                                alt="Banner govo Vietnam"
+                                title="Banner govo Vietnam"
+                                width="373"
+                                height="206"
+                                class="rounded-t-[30px] max-sm:rounded-t-[12px]"
+                            />
+                            <div
+                                class="p-[12px] flex items-center gap-x-[13px] max-sm:gap-x-[5px] max-sm:py-[6px] max-sm:px-[14px]"
+                            >
+                                <div class="">
+                                    <img
+                                        [ngSrc]="item.thumbnail"
+                                        alt="thumbnail product"
+                                        title="thumbnail product"
+                                        width="73"
+                                        height="72"
+                                        class="max-sm:w-[28.75px] max-sm:h-[28.75px]"
+                                    />
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-black font-semibold text-[20px] leading-[30px] mb-1 max-sm:text-[10px] max-sm:leading-[15px]"
+                                    >
+                                        {{ item.title }}
+                                    </p>
+                                    <div
+                                        class="flex items-center gap-x-[10px] max-sm:gap-x-[4px]"
+                                    >
+                                        <img
+                                            ngSrc="assets/images/ic_download.png"
+                                            alt="ic_download"
+                                            title="ic_download"
+                                            width="20"
+                                            height="20"
+                                            class="max-sm:w-[8px] max-sm:h-[8px]"
+                                        />
+                                        <p
+                                            class="text-black text-base max-sm:text-[8px] max-sm:leading-[12px]"
+                                        >
+                                            {{ item.total }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="product-view bg-black/80 rounded-[30px] absolute top-0 h-full flex justify-center items-center p-[30px] group/edit invisible group-hover/item:visible max-sm:p-[12px] max-sm:rounded-[12px]"
+                        >
+                            <div class="">
+                                <p
+                                    class="mb-[28px] text-white text-[20px] leading-[30px] font-medium text-center max-sm:mb-[24px] max-sm:text-[10px] max-sm:leading-[15px]"
+                                >
+                                    This App is available on Google Play
+                                </p>
+                                <div class="flex justify-center">
+                                    <a
+                                        [href]="item.link"
+                                        target="_blank"
+                                        class="cursor-pointer"
+                                        ><img
+                                            ngSrc="assets/images/google_play.png"
+                                            alt="Store Govo"
+                                            title="Store Govo"
+                                            width="177"
+                                            height="77"
+                                            class="max-sm:w-[60px] max-sm:h-[26px]"
+                                    /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    <div
+                        class="wow bounceInUp shadow-2xl rounded-[30px] relative duration-300 ease-in-out cursor-pointer hover:before:w-full before:h-full before:absolute before:top-0 before:z-[1] before:bg-black/80 before:rounded-[30px] max-sm:rounded-[12px] max-sm:before:rounded-[12px]"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.5s"
+                    >
+                        <img
+                            ngSrc="assets/images/more_product.png"
+                            alt="Banner govo Vietnam"
+                            title="Banner govo Vietnam"
+                            width="373"
+                            height="206"
+                            class="rounded-t-[30px] max-sm:rounded-t-[12px]"
+                        />
+                        <div
+                            class="p-[24px] text-center z-10 relative block max-sm:px-[40px] max-sm:py-[10px]"
+                        >
+                            <button
+                                class="bg-[#f28a28] text-white rounded-[37px] font-semibold text-[22px] leading-[33px] px-[25.5px] py-[11.5px] hover:bg-black max-sm:text-[10px] max-sm:leading-[15px] max-sm:px-[7px] max-sm:py-[4px]"
+                            >
+                                <a
+                                    href="https://play.google.com/store/apps/dev?id=8737102155398054550"
+                                    target="_blank"
+                                >
+                                    See More >></a
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="relative before:bg-[url('assets/images/bg_2.png')] before:bg-no-repeat before:w-[601px] before:h-[1577px] before:absolute before:top-[-20%] before:left-0 before:z-[-1] before:bg-right-top max-lg:before:bg-[url('assets/images/bg_mobie_4.png')] max-lg:before:w-[86px] max-lg:before:h-[405px]"
+>
+    <div
+        id="partners"
+        class="pt-[120px] mb-[80px] max-sm:pt-[40px] max-sm:mb-[4px] max-lg:pt-[80px] max-lg:mb-[30px]"
+    >
+        <div class="container mx-auto px-[15px]">
+            <app-title-home title="Partners" />
+            <div
+                class="wow fadeIn
+                grid grid-cols-5 gap-x-[20px] gap-y-[64px] mt-[88px]
+                max-lg:grid-cols-4 max-lg:gap-y-[24px] max-sm:mt-[12px] max-sm:gap-x-[0px] max-lg:mt-[44px] max-lg:gap-x-[17px]"
+                data-wow-duration="0.75s"
+                data-wow-delay="0.5s"
+            >
+                @for (item of partners; track $index) {
+                <div
+                    class="px-[15px] pt-[24px] pb-[16px] text-center max-sm:px-0 max-lg:pt-[8px] max-lg:pb-[8px]"
+                >
+                    <div class="flex justify-center">
+                        <img
+                            [ngSrc]="item.image"
+                            alt="partner govo"
+                            title="partner govo"
+                            width="120"
+                            height="120"
+                            class="max-sm:w-[40px] max-sm:h-[40px] max-lg:w-[80px] max-lg:h-[80px]"
+                        />
+                    </div>
+
+                    <p
+                        class="text-black font-medium text-[24px] leading-[32px] mt-[16px]
+                        max-sm:mt-[6px] max-sm:text-[10px] max-sm:leading-[15px] max-lg:text-[14px] max-lg:leading-[20px]"
+                    >
+                        {{ item.title }}
+                    </p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div
+        id="team"
+        class="pt-[120px] mb-[100px] max-sm:pt-[40px] max-sm:mb-[40px] max-lg:pt-[80px] max-lg:mb-[80px]"
+    >
+        <div
+            class="relative before:bg-[url('assets/images/bg_team.png')] before:bg-no-repeat before:w-[108px] before:h-[107px] before:absolute before:top-0 before:right-[80px] before:z-[-1] before:bg-right-top max-lg:before:right-[14px] max-lg:before:bg-[url('assets/images/bg_mobie_3.png')] max-lg:before:w-[33px] max-lg:before:h-[33px]"
+        >
+            <div class="container mx-auto px-[15px]">
+                <app-title-home title="Our Team" />
+                <div class="mt-[96px] max-lg:mt-[48px]"></div>
+                <div
+                    class="grid grid-cols-4 gap-x-[104px] gap-y-[64px] max-lg:hidden"
+                >
+                    @for (item of users; track $index) {
+                    <div
+                        class="wow bounceInUp text-center"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.5s"
+                    >
+                        <img
+                            [ngSrc]="item.image"
+                            [alt]="item.image"
+                            [title]="item.image"
+                            width="241"
+                            height="240"
+                            class="max-sm:min-w-[136px] max-sm:w-[136px] max-sm:h-[136px] max-lg:min-w-[200px]"
+                        />
+                        <p
+                            class="text-black text-[24px] leading-[36px] font-medium mt-[24px] max-lg:mt-[13px] max-sm:text-[14px] max-sm:leading-[21px] max-lg:text-[18px] max-lg:leading-[30px]"
+                        >
+                            {{ item.name }}
+                        </p>
+                        <p
+                            class="text-[#888888] text-[18px] leading-[27px] font-medium mt-[8px] max-lg:mt-[4px] max-sm:text-[10px] max-sm:leading-[15px] max-lg:text-[14px] max-lg:leading-[20px]"
+                        >
+                            {{ item.role }}
+                        </p>
+                    </div>
+                    }
+                </div>
+
+                <div
+                    class="wow bounceInUp hidden max-lg:block"
+                    data-wow-duration="1.5s"
+                    data-wow-delay="0.5s"
+                >
+                    <div class="wrapper relative">
+                        <owl-carousel-o [options]="customOptions">
+                            <ng-template
+                                *ngFor="let item of users"
+                                class="slide"
+                                carouselSlide
+                            >
+                                <div class="text-center">
+                                    <img
+                                        [ngSrc]="item.image"
+                                        [alt]="item.image"
+                                        [title]="item.image"
+                                        width="241"
+                                        height="240"
+                                    />
+                                    <p
+                                        class="text-black text-[24px] leading-[36px] font-medium mt-[24px] max-lg:mt-[13px] max-sm:text-[14px] max-sm:leading-[21px] max-lg:text-[18px] max-lg:leading-[30px]"
+                                    >
+                                        {{ item.name }}
+                                    </p>
+                                    <p
+                                        class="text-[#888888] text-[18px] leading-[27px] font-medium mt-[8px] max-lg:mt-[4px] max-sm:text-[10px] max-sm:leading-[15px] max-lg:text-[14px] max-lg:leading-[20px]"
+                                    >
+                                        {{ item.role }}
+                                    </p>
+                                </div>
+                            </ng-template>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <ng-template #member let-item="item">
+    <div class="text-center">
+        <img
+            [ngSrc]="item.image"
+            [alt]="item.image"
+            [title]="item.image"
+            width="241"
+            height="240"
+            class="max-sm:min-w-[136px] max-sm:w-[136px] max-sm:h-[136px] max-lg:min-w-[200px]"
+        />
+        <p
+            class="text-black text-[24px] leading-[36px] font-medium mt-[24px] max-lg:mt-[13px] max-sm:text-[14px] max-sm:leading-[21px] max-lg:text-[18px] max-lg:leading-[30px]"
+        >
+            {{ item.name }}
+        </p>
+        <p
+            class="text-[#888888] text-[18px] leading-[27px] font-medium mt-[8px] max-lg:mt-[4px] max-sm:text-[10px] max-sm:leading-[15px] max-lg:text-[14px] max-lg:leading-[20px]"
+        >
+            {{ item.role }}
+        </p>
+    </div>
+</ng-template> -->

@@ -1,0 +1,165 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: Poppins;
+}
+
+#header {
+    .header-down {
+        transition: all 0.4s ease-out;
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+
+    }
+}
+
+#header {
+    .header-up {
+        transition: all 0.4s ease-out;
+        -ms-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+.page-default {
+    h3 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 500;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    ul {
+        padding-left: 20px;
+        li {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    .des {
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: rgba(241, 117, 34, 1);
+            }
+        }
+
+    }
+}
+
+.is-active {
+    img {
+        filter: invert(45%) sepia(99%) saturate(660%) hue-rotate(346deg) brightness(98%) contrast(93%);
+    }
+    color: rgba(241, 117, 34, 1);
+}
+
+.wrapper {
+    .owl-carousel .owl-nav {
+        position: absolute;
+        margin: 0 !important;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        .next-slide, .prev-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            span {
+                font-size: 42px;
+            }
+        }
+
+        .owl-next {
+            top: 50%;
+            transform: translateY(-100%);
+            right: -20px;
+            position: absolute;
+            background: #FFFFFF;
+            border-radius: 100%;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            color: rgba(241, 117, 34, 0.5);
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                color: rgba(241, 117, 34, 1);
+                background: #FFFFFF;
+            }
+        }
+
+        .owl-prev {
+            top: 50%;
+            transform: translateY(-100%);
+            left: -20px;
+            position: absolute;
+            background: #FFFFFF;
+            border-radius: 100%;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            color: rgba(241, 117, 34, 0.5);
+            width: 40px;
+            height: 40px;
+            &:hover {
+                color: rgba(241, 117, 34, 1);
+                background: #FFFFFF;
+            }
+        }
+    }
+}
+
+
+@media not all and (min-width: 640px) {
+    .page-default {
+        h3 {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        h4 {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+        ul {
+            padding-left: 20px;
+            li {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

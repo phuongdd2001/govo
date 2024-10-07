@@ -1,0 +1,14 @@
+.product-item {
+    overflow: hidden;
+    &:hover {
+        .product-view {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .product-view {
+        transform: translateY(100px);
+        transition: 300ms ease-in-out;
+        opacity: 0;
+    }
+}
